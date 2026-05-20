@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>
+    Arcade Game
+  </title>
+
+  <!-- CSS -->
+
+  <link rel="stylesheet"
+        href="styles.css">
+
+  <!-- FUENTE -->
+
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- =====================================
+       HUD
+  ====================================== -->
+
+  <div class="hud">
+
+    <div class="hud-left">
+
+      <!-- VELOCIDAD -->
+
+      <div class="stat">
+
+        SPEED
+
+        <span id="speedText">
+          0
+        </span>
+
+      </div>
+
+      <!-- FRICCIÓN -->
+
+      <div class="stat">
+
+        K
+
+        <span id="kValue">
+          0.03
+        </span>
+
+      </div>
+
+    </div>
+
+    <!-- LADO DERECHO -->
+
+    <div class="hud-right">
+
+      <!-- SCORE -->
+
+      <div class="stat">
+
+        SCORE
+
+        <span id="scoreText">
+          0
+        </span>
+
+      </div>
+
+      <!-- NIVEL -->
+
+      <div class="stat">
+
+        LEVEL
+
+        <span id="levelText">
+          1
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- =====================================
+       VELOCÍMETRO
+  ====================================== -->
+
+  <div class="speedometer">
+
+    <div class="speed-circle">
+
+      <span id="speedNumber">
+        0
+      </span>
+
+      <small>
+        KM/H
+      </small>
+
+    </div>
+
+  </div>
+
+  <!-- =====================================
+       SLIDER
+  ====================================== -->
+
+  <div class="slider-box">
+
+    <input type="range"
+           id="kSlider"
+           min="0.01"
+           max="0.15"
+           step="0.01"
+           value="0.03">
+
+  </div>
+
+  <!-- =====================================
+       CONTROLES MOBILE
+  ====================================== -->
+
+  <div class="mobile-controls">
+
+    <!-- IZQUIERDA -->
+
+    <button id="leftBtn">
+      ◀
+    </button>
+
+    <!-- DERECHA -->
+
+    <button id="rightBtn">
+      ▶
+    </button>
+
+  </div>
+
+  <!-- =====================================
+       ACELERAR / FRENAR
+  ====================================== -->
+
+  <div class="vertical-controls">
+
+    <button id="upBtn">
+      ▲
+    </button>
+
+    <button id="downBtn">
+      ▼
+    </button>
+
+  </div>
+
+  <!-- =====================================
+       CANVAS
+  ====================================== -->
+
+  <canvas id="gameCanvas"></canvas>
+
+  <!-- JS -->
+
+  <script src="app.js"></script>
+
+</body>
+</html>
